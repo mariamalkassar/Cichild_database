@@ -1,0 +1,14 @@
+<app-new-fish></app-new-fish>
+<app-actions-log></app-actions-log>
+<app-free-names></app-free-names>
+<div [hidden]="selectedViewMode!==viewModes.tanks">
+    <app-tanks-visualizer></app-tanks-visualizer>
+</div>
+
+<div [hidden]="selectedViewMode!==viewModes.database">
+    <app-database-controller></app-database-controller>
+</div>
+
+<div [hidden]="selectedViewMode!==viewModes.login">
+    <app-login></app-login>
+</div>

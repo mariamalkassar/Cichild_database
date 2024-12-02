@@ -1,0 +1,59 @@
+<div class="modal fade" id="actionsLogModal" tabindex="-1" role="dialog" aria-labelledby="actionsLogModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+                <h4 class="modal-title">Actions log</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <label>Action Type filters</label>
+                </div>
+                <div class="row">
+                    <label class="col-lg-1 col-md-1">Create <input type="checkbox" [(ngModel)]="filters.actionType.create"></label>
+                    <label class="col-lg-1 col-md-1">Delete <input type="checkbox" [(ngModel)]="filters.actionType.delete"></label>
+                    <label class="col-lg-1 col-md-1">Update <input type="checkbox" [(ngModel)]="filters.actionType.update"></label>
+                    <label class="col-lg-1 col-md-1">Move <input type="checkbox" [(ngModel)]="filters.actionType.move"></label>
+                    <label class="col-lg-1 col-md-1">Rename <input type="checkbox" [(ngModel)]="filters.actionType.rename"></label>
+                    <label class="col-lg-1 col-md-1">Kill <input type="checkbox" [(ngModel)]="filters.actionType.kill"></label>
+                    <label class="col-lg-1 col-md-1">Retrieve <input type="checkbox" [(ngModel)]="filters.actionType.retrieve"></label>
+                    <label class="col-lg-1 col-md-1">Flag as missing <input type="checkbox" [(ngModel)]="filters.actionType.missing"></label>
+                    <label class="col-lg-1 col-md-1">Split <input type="checkbox" [(ngModel)]="filters.actionType.split"></label>
+                    <label class="col-lg-1 col-md-1">Merge <input type="checkbox" [(ngModel)]="filters.actionType.merge"></label>
+                    <label class="col-lg-1 col-md-1">Change specie <input type="checkbox" [(ngModel)]="filters.actionType.changeSpecie"></label>
+                </div>
+                <div class="row">
+                    <label>Item Type filters</label>
+                </div>
+                <div class="row">
+                    <label class="col-lg-1 col-md-1">Fish <input type="checkbox" [(ngModel)]="filters.itemType.fish"></label>
+                    <label class="col-lg-1 col-md-1">Clutch <input type="checkbox" [(ngModel)]="filters.itemType.clutch"></label>
+                    <label class="col-lg-1 col-md-1">Tank <input type="checkbox" [(ngModel)]="filters.itemType.tank"></label>
+
+                </div>
+                <div class="row">
+                    <input type="text" [(ngModel)]="filters.query"
+                           class="form-control"
+                           placeholder="Filter actions log (space to separate multiple queries)">
+                </div>
+                <ul style="max-height: 500px; overflow: auto">
+                    <li *ngFor="let action of filteredLog" class="action-log-item">
+                        <app-action [action]="action"></app-action>
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class="modal-footer modal-footer-bg">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+

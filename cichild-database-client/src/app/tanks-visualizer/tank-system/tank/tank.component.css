@@ -1,0 +1,26 @@
+::ng-deep .specie-panel-heading{
+  padding: 0;
+}
+
+::ng-deep .row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+::ng-deep .row.display-flex > [class*='col-'] {
+  flex-grow: 1;
+}
+
+::ng-deep .box {
+  height: 100%;
+}
+
+::ng-deep .row.display-flex [class*='col-'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.panel-body{
+  background-color: #eeeeee;
+}

@@ -1,0 +1,64 @@
+<app-new-clutch></app-new-clutch>
+<app-selected-clutch></app-selected-clutch>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+    <div class="panel panel-default" style="max-height: 700px; overflow-y: auto">
+
+        <div class="panel-heading">
+            <strong>Cichild database lists</strong>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </span>
+                    <input type="text" [(ngModel)]="globalSearchQuery" class="form-control"
+                           placeholder="General search">
+                </div>
+
+            </div>
+            <br>
+
+            <div class="tab">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#tab-fish-list" data-toggle="tab">
+                            <label>Fish list</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tab-clutches-list" data-toggle="tab">
+                            <label>Clutches list</label>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="tab-fish-list">
+                        <app-fish-list></app-fish-list>
+                    </div>
+                    <div class="tab-pane fish-details-tab-content" id="tab-clutches-list">
+                        <app-clutches-list></app-clutches-list>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngIf="selectedFish">
+    <div *ngIf="selectedViewMode===viewModes.fishDetails">
+        <app-fish-details></app-fish-details>
+    </div>
+
+    <div *ngIf="selectedViewMode===viewModes.newFish">
+        <app-new-fish></app-new-fish>
+    </div>
+</div>

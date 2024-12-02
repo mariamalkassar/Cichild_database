@@ -1,0 +1,33 @@
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fish-gender"
+     [ngClass]="{'fish-gender-male': fish.gender==='male',
+                'fish-gender-female' : fish.gender==='female',
+                'fish-gender-unknown' : fish.gender==='unknown'}"
+     (click)="selectFish()">
+    {{fish.name.name}} ({{fish.generation}})
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+     (click)="selectFish()">
+    <label *ngIf="fish.location">{{fish.location.name}}</label>
+</div>
+
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"
+     (click)="selectFish()">
+  <span class="glyphicon glyphicon-stop"
+        [ngClass]="{'boolean-true': fish.clutches_ids.length > 0,
+                'boolean-false' : fish.clutches_ids.length === 0}">
+  </span>
+</div>
+
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"
+     (click)="selectFish()">
+  <span class="glyphicon glyphicon-stop"
+        [ngClass]="{'boolean-true': fish.is_dead===false,
+                'boolean-false' : fish.is_dead}">
+  </span>
+</div>
+
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+    <span (click)="delete(fish)" class="glyphicon glyphicon-remove red"></span>
+</div>
+

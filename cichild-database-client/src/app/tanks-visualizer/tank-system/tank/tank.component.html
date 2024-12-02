@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading" style="background-color: {{tankSystemColor}}">
+    <strong class="black">Tank: {{tank.name}}</strong>
+  </div>
+
+  <div class="panel-body">
+    <div class="row display-flex">
+      <div *ngFor="let fragmentID of tank.fragments_ids"
+           class="col-lg-{{getTankFragment(fragmentID).HTMLColumnsCount}}
+             col-md-{{getTankFragment(fragmentID).HTMLColumnsCount}}" >
+        <app-tank-fragment [fragment]="getTankFragment(fragmentID)"></app-tank-fragment>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div style="clear: both"></div>

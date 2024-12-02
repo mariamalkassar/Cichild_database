@@ -1,0 +1,29 @@
+<div class="modal fade" id="freeNamesModal" tabindex="-1" role="dialog" aria-labelledby="freeNamesModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+                <h4 class="modal-title">Free fish names</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul style="max-height: 500px; overflow: auto">
+                    <li *ngFor="let name of freeNames" class="action-log-item">
+                        {{name.name}}
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class="modal-footer modal-footer-bg">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+

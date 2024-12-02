@@ -1,0 +1,72 @@
+
+<div class="row ml-5">
+    <label class="pull-left mr-15">
+        <input type="checkbox" [(ngModel)]="fishListFilters.parenting.parents">
+        Only parents
+    </label>
+
+
+    <label class="pull-left">
+        <input type="checkbox" [(ngModel)]="fishListFilters.parenting.non_parents">
+        Only non-parents
+    </label>
+</div>
+<div style="clear:both;"></div>
+
+<div class="row ml-5">
+    <label class="pull-left mr-37">
+        <input type="checkbox" [(ngModel)]="fishListFilters.isAlive">
+        Only alive
+    </label>
+
+    <label class="pull-left">
+        <input type="checkbox" [(ngModel)]="fishListFilters.isDead">
+        Only dead
+    </label>
+</div>
+<div style="clear:both;"></div>
+
+<div class="row ml-5">
+    <label class="pull-left mr-15">
+        <input type="checkbox" [(ngModel)]="fishListFilters.gender.isFemale">
+        Only females
+    </label>
+
+    <label class="pull-left mr-15">
+        <input type="checkbox" [(ngModel)]="fishListFilters.gender.isMale">
+        Only males
+    </label>
+
+    <label class="pull-left">
+        <input type="checkbox" [(ngModel)]="fishListFilters.gender.isUnknown">
+        Only unknowns
+    </label>
+</div>
+<div style="clear:both;"></div>
+
+
+<div class="row list-item-row list-item-header-row">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        Fish name (Generation)
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        Location
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        Is parent?
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        Is alive?
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        Delete
+    </div>
+</div>
+<div *ngFor="let fish of filteredFishList"
+     class="row list-item-row list-item-data-row"
+     [ngClass]="{'selected-item':fish===selectedFish}">
+    <app-fish-list-item [fish]="fish"></app-fish-list-item>
+</div>
+<div style="clear: both"></div>

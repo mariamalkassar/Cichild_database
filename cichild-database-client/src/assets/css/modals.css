@@ -1,0 +1,18 @@
+.modal-dialog{
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.modal-header, .modal-footer{
+    background-color: #eeeeee;
+    color: #222222;
+    border: 1px #ffffff solid;
+}
+.modal-body{
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.modal-backdrop {
+    opacity: 0.9 !important;
+}

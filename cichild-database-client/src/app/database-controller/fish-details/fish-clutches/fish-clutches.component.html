@@ -1,0 +1,61 @@
+<!--<a class="btn btn-success">New Clutch</a>-->
+
+<div class="row list-item-row list-item-header-row">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+        Male
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+        Female
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        DOF
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        Details
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        Delete
+    </div>
+
+</div>
+
+<div *ngFor="let clutchID of selectedFish.clutches_ids"
+     class="row list-item-row list-item-data-row">
+    <ng-container *ngIf="getClutch(clutchID); let clutch;">
+
+        <div (click)="selectFish(clutch.male)"
+             class="col-lg-2 col-md-2 col-sm-4 col-xs-12 fish-gender fish-gender-male">
+            {{clutch.male.name.name}} ({{clutch.male.generation}})
+        </div>
+        <div (click)="selectFish(clutch.female)"
+             class="col-lg-2 col-md-2 col-sm-4 col-xs-12 fish-gender fish-gender-female">
+            {{clutch.female.name.name}} ({{clutch.female.generation}})
+        </div>
+
+        <div (click)="selectClutch(clutch)"
+             data-toggle="modal" data-target="#selectedClutchModal"
+             class="col-lg-4 col-md-4 col-sm-2 col-xs-12">
+            <label style="cursor: pointer">{{clutch.dof}}</label>
+        </div>
+
+        <div (click)="selectClutch(clutch)"
+             data-toggle="modal" data-target="#selectedClutchModal"
+             class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <label style="cursor: pointer">Details</label>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <span (click)="delete(clutch)" class="glyphicon glyphicon-remove red"></span>
+        </div>
+
+    </ng-container>
+
+</div>
+<br>
+<div class="row pull-right">
+    <a data-toggle="modal" href="#newClutchModal"
+       *ngIf="selectedFish.gender!=='unknown'"
+       (click)="onNewClutchClick()"
+       class="btn btn-block btn-success">
+        <span class="glyphicon-plus glyphicon"></span> New Clutch
+    </a>
+</div>

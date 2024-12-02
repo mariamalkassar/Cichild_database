@@ -1,0 +1,41 @@
+.row{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.fish-details-tab-content{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.tab .nav-pills > li > a {
+  /*border-radius: 4px 4px 0 0;*/
+}
+
+.tab .tab-content {
+  color: #333333;
+  background-color: #dddddd;
+  padding: 10px 5px 5px 10px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  /*background-color: #006A65;*/
+  background-color: #dddddd;
+  color: #333333;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #cccccc;
+
+}
+
+label{
+  color: #333333;
+}
+
+.panel-body{
+  background-color: #eeeeee;
+}
+
+

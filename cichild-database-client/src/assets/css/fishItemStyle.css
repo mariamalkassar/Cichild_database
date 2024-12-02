@@ -1,0 +1,39 @@
+.fish{
+  border: solid 0.5px;
+  text-align: center;
+}
+
+.fish-gender{
+  color: black;
+  height: 100%;
+}
+.fish-gender-male{
+  background: lightskyblue !important;
+  border-color: dodgerblue !important;
+}
+
+.fish-gender-male:hover{
+  background-color: dodgerblue;
+  color: black;
+}
+
+.fish-gender-female{
+  background: palevioletred !important;
+  border-color: darkred !important;
+}
+
+.fish-gender-female:hover{
+  background-color: darkred;
+  color: black;
+}
+
+.fish-gender-unknown{
+  background: lightyellow;
+  color: black;
+  border-color: rosybrown;
+}
+
+.fish-gender-unknown:hover{
+  color: lightyellow;
+  background-color: rosybrown;
+}

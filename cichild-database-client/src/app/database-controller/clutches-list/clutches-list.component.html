@@ -1,0 +1,37 @@
+<div class="row list-item-row list-item-header-row">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        Male
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        Female
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12">
+        DOF
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+        Details
+    </div>
+
+</div>
+
+<div *ngFor="let clutch of filteredClutchesList"
+     (click)="selectClutch(clutch)"
+     data-toggle="modal" data-target="#selectedClutchModal"
+     class="row list-item-row list-item-data-row">
+
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fish-gender fish-gender-male">
+        {{clutch.male.name.name}} ({{clutch.male.generation}})
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fish-gender fish-gender-female">
+        {{clutch.female.name.name}} ({{clutch.female.generation}})
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12">
+        <label style="cursor: pointer">{{clutch.dof}}</label>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+        <label style="cursor: pointer">Details</label>
+    </div>
+
+</div>

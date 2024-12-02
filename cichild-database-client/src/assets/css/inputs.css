@@ -1,0 +1,14 @@
+input[type=text]{
+    background-color: #eeeeee;
+    color: black;
+}
+
+.input{
+    background-color: #eeeeee;
+    color: black;
+}
+
+.input:disabled{
+    background-color: #666666;
+    color: black;
+}

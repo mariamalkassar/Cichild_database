@@ -1,0 +1,10 @@
+.panel-heading{
+    background-color: #dddddd;
+}
+.panel-body, .list-item-header-row{
+    background-color: #ffffff;
+}
+
+.list-item-data-row{
+    background-color: #eeeeee;
+}

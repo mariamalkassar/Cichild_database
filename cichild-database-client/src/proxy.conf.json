@@ -1,0 +1,13 @@
+{
+  "/api": {
+    "target": "localhost:80",
+  "secure": false
+  },
+
+  "/media": {
+  "target": "localhost:80",
+  "secure": false
+  }
+}
+
+

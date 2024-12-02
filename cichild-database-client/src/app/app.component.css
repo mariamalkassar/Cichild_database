@@ -1,0 +1,79 @@
+#dashboard_default .e-panel .e-panel-container {
+  vertical-align: middle;
+  font-size: 20px;
+  background-color: #111111;
+}
+
+span#close {
+  padding: 10px;
+}
+
+.glyphicon-remove {
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.mat-icon {
+  font-size: 1000px;
+}
+
+.width {
+  min-width: 400px;
+}
+
+
+#visualizationOptions {
+  background-color: #222222;
+  border: none;
+}
+
+#visualizationOptions label{
+  font-size: 20px;
+}
+
+#visualizationOptions span{
+  cursor: pointer;
+}
+#visualizationOptions .e-panel-container{
+  background-color: #666666 !important;
+  overflow-y: auto !important;
+}
+
+
+#advancedSearch {
+  background-color: #222222;
+  border: none;
+}
+
+#advancedSearch label{
+  font-size: 20px;
+}
+
+#advancedSearch span{
+  cursor: pointer;
+}
+#advancedSearch .e-panel-container{
+  background-color: #666666 !important;
+  overflow-y: auto !important;
+}
+
+
+#regionsOfPosition {
+  background-color: #222222;
+  border: none;
+}
+
+#regionsOfPosition label{
+  font-size: 20px;
+}
+
+#regionsOfPosition span{
+  cursor: pointer;
+}
+#regionsOfPosition .e-panel-container{
+  background-color: #666666 !important;
+  overflow-y: auto !important;
+}
+
+
+

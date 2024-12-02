@@ -1,0 +1,18 @@
+.tank-fragment-actions-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.panel-heading {
+    background-color: #cccccc;
+}
+
+.panel-body {
+    background-color: #dddddd;
+}
+
+.big-checkbox {
+    width: 15px;
+    height: 15px;
+    padding-right: 2px;
+}

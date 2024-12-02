@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-12">
+        <label>Fish name</label>
+        <select [(ngModel)]="selectedFish.name"
+                [disabled]="selectedFish.is_dead"
+                class="form-control input">
+            <option *ngFor="let name of nameOptions"
+                    [ngValue]="name">{{name.name}}</option>
+        </select>
+
+        <label>Gender</label>
+        <select [(ngModel)]="selectedFish.gender"
+                class="form-control input">
+            <option *ngFor="let gender of genderOptions"
+                    [ngValue]="gender">{{gender}}</option>
+        </select>
+
+        <label>Location</label>
+        <select [(ngModel)]="selectedFish.location"
+                [disabled]="selectedFish.is_dead"
+                class="form-control input">
+            <option *ngFor="let location of locationOptions"
+                    [ngValue]="location">{{location.name}} </option>
+        </select>
+        <label>Transgene</label>
+        <input type="text" [(ngModel)]="selectedFish.transgene" class="form-control">
+
+        <label>Date</label>
+        <input type="text" [(ngModel)]="selectedFish.date" class="form-control">
+
+        <label>DOF</label>
+        <input type="date" [(ngModel)]="selectedFish.dof" class="form-control">
+
+        <label>Usage</label>
+        <input type="text" [(ngModel)]="selectedFish.usage" class="form-control">
+        <br>
+        <div class="pull-left mr-50">
+            <label class="mr-5"><span class="glyphicon glyphicon-user"></span> </label>
+            <span class="glyphicon glyphicon-arrow-right"></span>
+            <label class="white ml-5"> {{selectedFish.user}}</label>
+        </div>
+        <label class="pull-left mr-50"> <input type="checkbox" [(ngModel)]="selectedFish.is_missing"> Is missing? </label>
+        <label class="pull-left"> <input type="checkbox" [(ngModel)]="selectedFish.is_dead"> Is dead?</label>
+
+    </div>
+</div>
+
+<br>
+<button (click)="updateFishData()"
+        class="btn btn-success form-control">Save changes
+</button>

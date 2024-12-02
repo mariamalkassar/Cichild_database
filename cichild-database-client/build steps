@@ -1,0 +1,5 @@
+- npm run build
+    this will produce a "dist" folder
+    Delete the new dist folder
+
+- ng build --prod --aot=true --output-hashing=all --extract-css=true

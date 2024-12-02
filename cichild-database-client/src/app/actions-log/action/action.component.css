@@ -1,0 +1,68 @@
+.action-item-date {
+    color: white;
+}
+
+.action-item-name {
+    color: yellow;
+}
+
+.action-item-type-fish {
+    color: aquamarine;
+}
+
+.action-item-type-clutch {
+    color: lightcoral;
+}
+
+.action-item-type-tank {
+    color: plum;
+}
+
+
+.action-user {
+    color: purple;
+}
+
+.action-type-create {
+    color: lawngreen;
+}
+
+.action-type-delete {
+    color: red;
+}
+
+.action-type-update {
+    color: cyan;
+}
+
+.action-type-split {
+    color: blue;
+}
+
+.action-type-merge {
+    color: coral;
+}
+
+.action-type-move {
+    color: deeppink;
+}
+
+.action-type-kill {
+    color: palevioletred;
+}
+
+.action-type-change-specie {
+    color: dodgerblue;
+}
+
+.action-type-missing {
+    color: saddlebrown;
+}
+
+.action-type-retrieve {
+    color: green;
+}
+
+.action-type-rename {
+    color: darkkhaki;
+}

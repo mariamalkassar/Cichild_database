@@ -1,0 +1,24 @@
+<span class="action-item-date">{{action.date}}</span>
+[<span  [ngClass]="{'action-type-create': action.actionType==='CREATE',
+                'action-type-delete' : action.actionType==='DELETE',
+                'action-type-move' : action.actionType==='MOVE',
+                'action-type-split' : action.actionType==='SPLIT',
+                'action-type-merge' : action.actionType==='MERGE',
+                'action-type-rename' : action.actionType==='RENAME',
+                'action-type-retrieve' : action.actionType==='RETRIEVE',
+                'action-type-kill' : action.actionType==='KILL',
+                'action-type-change-specie' : action.actionType==='CHANGE SPECIE',
+                'action-type-missing' : action.actionType==='FLAG AS MISSING',
+                'action-type-update' : action.actionType==='UPDATE'}"
+>{{action.actionType}}</span>
+
+
+- <span [ngClass]="{'action-item-type-fish': action.itemType==='FISH',
+                'action-item-type-clutch' : action.itemType==='CLUTCH',
+                'action-item-type-tank' : action.itemType==='TANK'}"
+>{{action.itemType}}</span>
+(<span class="action-item-name">{{action.itemName}}</span>)] -
+[<span class="action-user">{{action.user}}</span>]
+
+<span [innerHTML]="action.description"></span>
+

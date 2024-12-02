@@ -1,0 +1,39 @@
+<div *ngIf="locationHistory.length > 0">
+
+    <div class="row list-item-row list-item-header-row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            Location
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            Move in date
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            Move out date
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            Is current
+        </div>
+    </div>
+
+    <div *ngFor="let location of locationHistory"
+         class="row list-item-row list-item-data-row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            {{location.location_name}}
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            {{location.move_in_date}}
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            {{location.move_out_date}}
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <span class="glyphicon glyphicon-stop"
+                      [ngClass]="{'boolean-true': location.is_current,
+                'boolean-false' : location.is_current===false}"></span>
+        </div>
+    </div>
+</div>
+
+<label *ngIf="locationHistory.length === 0">
+    No history registered!
+</label>

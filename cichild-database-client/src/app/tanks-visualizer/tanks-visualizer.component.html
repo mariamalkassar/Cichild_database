@@ -1,0 +1,22 @@
+<div class="tab" #mainBody>
+  <ul class="nav nav-pills">
+    <li *ngFor="let system of tanksSystems; let i=index"
+        [ngClass]="{'active':selectedSystemIndex===i}">
+      <a href="#tab-system-{{system.id}}" data-toggle="tab"
+         [ngStyle]="{'color' : system.color}">
+        <label>{{system.name}}</label>
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content clearfix">
+    <div *ngFor="let system of tanksSystems; let i=index"
+         class="tab-pane" id="tab-system-{{system.id}}"
+         [ngClass]="{'active':selectedSystemIndex===i}">
+            <app-tank-system [system]="system"></app-tank-system>
+    </div>
+  </div>
+</div>
+
+
+

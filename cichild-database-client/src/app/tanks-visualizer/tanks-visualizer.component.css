@@ -1,0 +1,9 @@
+.tab-content{
+  padding:10px;
+  background: #dddddd;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+  background: #dddddd;
+}
+

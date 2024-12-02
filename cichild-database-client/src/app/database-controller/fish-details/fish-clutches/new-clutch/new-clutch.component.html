@@ -1,0 +1,95 @@
+<div class="modal fade" id="newClutchModal" tabindex="-1" role="dialog" aria-labelledby="newClutchModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+                <h4 class="modal-title">Create a new clutch</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Male Parent</label>
+                        <select [(ngModel)]="newClutch.male" class="form-control">
+                            <option *ngFor="let male of malesOption"
+                                    [ngValue]="male">{{male.name.name}}({{male.generation}}) <span
+                                    *ngIf="male.is_dead===false"> --- Alive</span>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Female Parent</label>
+                        <select [(ngModel)]="newClutch.female" class="form-control">
+                            <option *ngFor="let female of femalesOption"
+                                    [ngValue]="female">{{female.name.name}}({{female.generation}}) <span
+                                    *ngIf="female.is_dead===false"> --- Alive</span>
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Usage</label>
+                        <input type="text" [(ngModel)]="newClutch.usage" class="form-control">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>DOF</label>
+                        <input type="date" [(ngModel)]="newClutch.dof" class="form-control">
+<!--                        <input type="text" [(ngModel)]="newClutch.dof" class="form-control">-->
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Switch to father date</label>
+                        <input type="date" [(ngModel)]="newClutch.switchToFatherDate" class="form-control">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Switch to father size</label>
+                        <input type="text" [(ngModel)]="newClutch.switchToFatherSize" class="form-control">
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <br>
+                        <label>Is dead <input type="checkbox" [(ngModel)]="newClutch.isDead"></label>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngIf="newClutch.isDead">
+                        <label>Death Date</label>
+                        <input type="date" [(ngModel)]="newClutch.deathDate" class="form-control">
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <br>
+                        <label>Include in the CSV file <input type="checkbox" [(ngModel)]="newClutch.includeInCSV"></label>
+                    </div>
+
+                </div>
+
+
+                <br>
+                <button (click)="save()"
+                        class="btn btn-success form-control"
+                        data-dismiss="modal">Save
+                </button>
+
+            </div>
+
+            <div class="modal-footer modal-footer-bg">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+

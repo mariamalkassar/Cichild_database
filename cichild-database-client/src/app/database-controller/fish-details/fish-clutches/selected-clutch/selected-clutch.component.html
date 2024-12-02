@@ -1,0 +1,109 @@
+<div class="modal fade" id="selectedClutchModal" tabindex="-1" role="dialog" aria-labelledby="newClutchModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+                <h4 class="modal-title">Create a new clutch</h4>
+            </div>
+            <div class="modal-body" *ngIf="selectedClutch">
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="pull-left mr-20">
+                            <label class="mr-5"><span class="glyphicon glyphicon-user"></span> </label>
+                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <label class="white ml-5"> {{selectedClutch.user}}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label class="pr-5">Male Parent</label>
+                        <label (click)="selectFish(selectedClutch.male)"
+                               data-dismiss="modal"
+                               style="cursor: pointer"
+                               class="fish-gender fish-gender-male p-5 raduis">{{selectedClutch.male.name.name}}</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label class="pr-5">Female Parent</label>
+                        <label (click)="selectFish(selectedClutch.female)"
+                               data-dismiss="modal"
+                               style="cursor: pointer"
+                               class="fish-gender fish-gender-female p-5 raduis">{{selectedClutch.female.name.name}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Usage</label>
+                        <input type="text" [(ngModel)]="selectedClutch.usage" class="form-control">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>DOF</label>
+                        <input type="date" [(ngModel)]="selectedClutch.dof" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Switch to father date</label>
+                        <input type="date" [(ngModel)]="selectedClutch.switch_to_father_date" class="form-control">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <label>Switch to father size</label>
+                        <input type="text" [(ngModel)]="selectedClutch.switch_to_father_size" class="form-control">
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <br>
+                        <label>Is dead <input type="checkbox" [(ngModel)]="selectedClutch.is_dead"></label>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngIf="selectedClutch.is_dead">
+                        <label>Death Date</label>
+                        <input type="date" [(ngModel)]="selectedClutch.death_date" class="form-control">
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <br>
+                        <label>Include in the CSV file <input type="checkbox"
+                                                              [(ngModel)]="selectedClutch.include_in_csv"></label>
+                    </div>
+
+                </div>
+
+                <button (click)="updateClutchData()"
+                        class="btn btn-success form-control" data-dismiss="modal">
+                    Save
+                </button>
+                <br>
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-md-offset-1">
+                        <div *ngIf="selectedClutch">
+                            <app-comments-list [itemType]="'clutch'" [itemID]="selectedClutch.id"
+                                               [comments]="selectedClutch.comments"></app-comments-list>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer modal-footer-bg">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+

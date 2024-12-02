@@ -1,0 +1,50 @@
+<app-tank-fragment-comments [fragment]="fragment"></app-tank-fragment-comments>
+<div class="panel panel-default box" style="background-color: #dddddd">
+
+    <div class="panel-heading">
+        <div>
+            <a data-toggle="modal" href="#newFishModal"
+               (click)="setNewFishLocation(fragment)">
+                <span class="glyphicon glyphicon-plus large_icon green tank-fragment-actions-btn"></span>
+            </a>
+            <a data-toggle="modal" href="#fragment_{{fragment.id}}_CommentsModal">
+                <span class="glyphicon glyphicon-comment large_icon blue mr-15  tank-fragment-actions-btn" ></span>
+            </a>
+        </div>
+        <div class="row mt-20" style="padding-right: 10px">
+            <div class="col-md-1">
+                <input type="checkbox" class="big-checkbox" [(ngModel)]="fragment.isDestination" (change)="onIsDestinationChange()">
+            </div>
+            <div class="col-md-11">
+                <select [(ngModel)]="splitMergeSelectedOption"
+                        (change)="onSplitMergeChange()"
+                        class="form-control input">
+                    <option selected>{{fragment.name}}</option>
+
+                    <option disabled *ngIf="fragment.splitting_options.length > 0">-- Splitting options --</option>
+                    <option *ngFor="let split_option of fragment.splitting_options"
+                            [ngValue]="split_option">{{split_option.fragment_1.name}}
+                        | {{split_option.fragment_2.name}}</option>
+                    <option disabled *ngIf="fragment.merging_options.length > 0">-- Merging options --</option>
+                    <option *ngFor="let merge_option of fragment.merging_options"
+                            [ngValue]="merge_option">{{merge_option.name}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-heading specie-panel-heading center-block">
+        <select [(ngModel)]="fragment.specie_id"
+                class="form-control input"
+                (change)="onSpecieChange()">
+            <option *ngFor="let specie of species"
+                    [ngValue]="specie.id">{{specie.name}}</option>
+        </select>
+    </div>
+
+    <div class="panel-body">
+        <div *ngFor="let f of fragment.fish">
+            <app-tank-fish [fish]="f" [fragmentHTMLColumnsCount]="fragment.HTMLColumnsCount"></app-tank-fish>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import "../node_modules/@syncfusion/ej2-base/styles/material.css";*/
+/*@import "../node_modules/@syncfusion/ej2-angular-layouts/styles/material.css";*/
+@import "../src/assets/css/fishItemStyle.css";
+@import "../src/assets/css/modals.css";
+@import "../src/assets/css/lists.css";
+@import "../src/assets/css/spacing.css";
+@import "../src/assets/css/inputs.css";
+body {
+  background: #eeeeee;
+}
+
+
+.panel {
+  padding: 0;
+}
+
+.panel-heading {
+  text-align: center;
+}
+
+.panel-body {
+  background: #666666;
+}
+
+.panel-default > .panel-heading {
+  background: #aaaaaa;
+  border-color: black;
+  color: #222222;
+}
+
+.panel-default {
+  border-color: black;
+}
+
+.boolean-true{
+  color: lightgreen;
+}
+
+.boolean-false{
+  color: lightcoral;
+}
+.green{
+  color: green;
+}
+.blue{
+  color: lightskyblue;
+}
+
+.red{
+  color: red;
+}
+.large_icon{
+  font-size: 15px;
+}
+.black{
+  color: white;
+}
+
+.white{
+  color: #222222;
+}
+
+
+.raduis{
+  border-radius: 10px;
+}

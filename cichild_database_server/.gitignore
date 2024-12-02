@@ -1,0 +1,23 @@
+/.idea/
+/venv
+/Backup
+/media
+/Backups
+/un_used_file
+
+/NBLAST/CMTK
+
+*.pyc
+*.sqlite3
+*.csv
+
+*.DS_Store
+
+RTree data.idx
+RTree data.dat
+neurons_database.sqlite3
+neurons_database - Copy.sqlite3
+
+*.mov
+*.avi
+*.gif

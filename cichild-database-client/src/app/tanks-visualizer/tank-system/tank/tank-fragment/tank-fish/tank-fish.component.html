@@ -1,0 +1,9 @@
+<button [ngClass]="{'fish-gender-male': fish.gender==='male',
+                'fish-gender-female' : fish.gender==='female',
+                'fish-gender-unknown' : fish.gender==='unknown'}"
+
+        class="fish border_raduis col-lg-{{fish.HTMLColumnsCount}} col-md-{{fish.HTMLColumnsCount}} col-sm-{{fish.HTMLColumnsCount}} col-xs-{{fish.HTMLColumnsCount}}"
+        (click)="onFishClick()"
+        data-toggle="modal" data-target="#modalFishDetails">
+    {{fish.name.name}} ({{fish.generation}})
+</button>

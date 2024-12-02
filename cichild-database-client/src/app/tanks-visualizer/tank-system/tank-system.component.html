@@ -1,0 +1,9 @@
+<div *ngFor="let tankID of system.tanks_ids"
+     class="col-lg-11, col-md-11"
+>
+    <app-tank [tank]="getTank(tankID)"></app-tank>
+</div>
+<div class="col-lg-1, col-md-1"
+     style="float:right; vertical-align: center; writing-mode: vertical-rl;text-orientation: mixed;">
+    {{system.landmark}}
+</div>
